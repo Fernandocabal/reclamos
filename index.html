@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<!-- CSS de Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<!-- JavaScript de Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="./assets/js/maps.js"></script>
+<link rel="icon" href="./assets/img/logof.png">
+<title>Reclamos Awaterra</title>
+</head>
+
+<body>
+    <header>
+        <section class="cabecera">
+            <img src="./assets/img/logof.png" class="logo_awaterra">
+            <h1 class="m-0">AwaTerra S.A</h1>
+            <div style="margin-top: 10px;">
+                <p class="p-0 m-0">Bienvenido a la página de reclamos de Awaterra. Por favor, ingresa tu código de
+                    usuario
+                    para
+                    continuar.
+                </p>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <p class="p-0 m-0">Si no tienes un código,solicítelo al</p>
+                <a class="whatsapp_link"
+                    href="https://wa.me/595981820052?text=Buenas,%20cual%20es%20mi%20codigo%20de%20usuario?"><img
+                        src="./assets/img/whatsapp.png" class="whatsapp_img" alt=""></a>
+            </div>
+        </section>
+    </header>
+    <section class="d-flex flex-column justify-content-around form_codigo_cliente">
+        <div>
+            <form action="" method="post">
+                <input class="awinput" type="text" name="codigo_cliente" placeholder="Codigo Cliente" required>
+                <input type="submit" value="Enviar" class="awbtn">
+            </form>
+        </div>
+    </section>
+    <p>Datos del usuario:</p>
+    <section class="col-12 d-flex p-2">
+        <div class="col-md-4 group-datos">
+            <div>Nombre:</div>
+            <div></div>
+        </div>
+        <div class="col-md-4 group-datos">
+            <div>Apellido:</div>
+            <div></div>
+        </div>
+        <div class="col-md-4 group-datos">
+            <div>Telefono:</div>
+            <div></div>
+        </div>
+    </section>
+
+    <section class="form_reclamos">
+        <div class="p-2 d-flex align-items-center">
+            <p class="m-0">Por favor, selecciona el tipo de reclamo que deseas realizar:</p>
+        </div>
+        <form action="" method="post" class="form_reclamos_input">
+            <div class="group-form">
+                <div class="form_select">
+                    <select class="form-select form-select-sm" name="" id="">
+                        <option value="">Selecciona un tipo de reclamo</option>
+                        <option value="1">Falta de Agua</option>
+                        <option value="2">Caño Roto</option>
+                        <option value="3">Falta de precion</option>
+                        <option value="4">Fugas</option>
+                        <option value="4">Verificacion de Consumo</option>
+                    </select>
+                </div>
+                <div class="campo_maps">
+                    <p class="m-0">Selecciona tu ubicación en el mapa</p>
+                    <div id="map"></div>
+                    <div class="d-flex align-items-center">
+                        <input type="text" id="ubicacion" placeholder="Latitud, Longitud" readonly class="awinput">
+                        <input type="button" class="awbtn" onclick="obtenerUbicacion(event)"
+                            value="Usar mi ubicación actual" style="line-height: 0px;">
+                    </div>
+
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <div class="col-12 d-flex">
+                    <p class="m-0">Por favor, adjunta una imagen:</p>
+                    <label for="abrir_camara" class="awbtn">Abrir Camara</label>
+                    <input type="file" name="foto" id="abrir_camara" accept="image/*" capture="camera"
+                        style="display: none;">
+                </div>
+                <div class="col-2">
+                    <input type="submit" class="awbtn" value="Enviar Reclamo">
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

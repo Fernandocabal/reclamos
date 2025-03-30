@@ -1,0 +1,134 @@
+:root {
+    --azul-awaterra: #176eaf;
+    --hoverbtn-azul-awaterra: #0a4572;
+    --celeste-awaterra: #7fbce4;
+    --background: #88c2ee7b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.awbtn {
+    color: #fff;
+    outline: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--azul-awaterra);
+    transition: all .2s;
+    height: 30px;
+}
+
+
+.awbtn:hover {
+    cursor: pointer;
+    background-color: var(--hoverbtn-azul-awaterra);
+}
+
+.awinput {
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--background);
+    height: 30px;
+    transition: all .2s;
+}
+
+.awinput:focus-visible {
+    /* border: 1px solid var(--hoverbtn-azul-awaterra); */
+    box-shadow: 1px 1px 10px #176eaf;
+}
+
+.cabecera {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecera .logo_awaterra {
+    width: 100px;
+    height: 100px;
+}
+
+.form_codigo_cliente {
+    height: 70px;
+    align-items: center;
+}
+
+.form_reclamos {
+    outline: 1px solid red;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_reclamos_input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_select {
+    outline: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.group-form {
+    width: 100%;
+    outline: 1px solid red;
+    display: flex;
+}
+
+.campo_maps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.whatsapp_link {
+    display: flex;
+    justify-content: center;
+}
+
+.whatsapp_img {
+    width: 40px;
+
+    height: 40px;
+}
+
+.datos_usuarios {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 13px;
+    outline: 1px solid red;
+}
+
+.datos_obtenidos {
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--background);
+    width: 180px;
+}
+
+
+.group-datos {
+    display: flex;
+}
+
+#map {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
