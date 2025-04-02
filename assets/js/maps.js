@@ -1,12 +1,12 @@
 let mapa, marcador;
 document.addEventListener('DOMContentLoaded', function () {
-    mapa = L.map('map').setView([-25.2637, -57.5759], 13); // Ñemby por defecto
+    mapa = L.map('map').setView([-25.3524099, -57.5899758], 13);
 
-    // Cargar el mapa de OpenStreetMap
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
     }).addTo(mapa);
-    marcador = L.marker([-25.2637, -57.5759], { draggable: true }).addTo(mapa);
+    marcador = L.marker([-25.3524099, -57.5899758], { draggable: true }).addTo(mapa);
 
     marcador.on('dragend', function (event) {
         let lat = event.target.getLatLng().lat;
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Obtener la ubicación actual del usuario
+
 function obtenerUbicacion(event) {
     event.preventDefault();
     if ("geolocation" in navigator) {
@@ -24,7 +24,6 @@ function obtenerUbicacion(event) {
             let lon = position.coords.longitude;
             let ubicacionTexto = lat + ", " + lon;
 
-            // Actualizar input
             document.getElementById("ubicacion").value = ubicacionTexto;
 
             if (mapa) { // Verifica si 'mapa' está definido
