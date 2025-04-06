@@ -24,6 +24,13 @@
     height: 30px;
 }
 
+.awbtn-dark {
+    color: #fff;
+    outline: none;
+    font-size: 12px;
+    background-color: rgb(115 176 221);
+}
+
 
 .awbtn:hover {
     cursor: pointer;
@@ -92,7 +99,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
+    width: 100%;
+    height: 90%;
 }
 
 .whatsapp_link {
@@ -129,6 +137,25 @@
 
 #map {
     width: 100%;
-    height: 200px;
+    height: 300px;
     margin-bottom: 10px;
+}
+
+@media screen and (min-width:320px) and (max-width: 768px) {
+    .cabecera {
+        width: 100%;
+    }
+
+    .cabecera div p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form_reclamos_input p {
+        font-size: 12px;
+    }
+
+    .ctn_datos_usuarios {
+        flex-direction: column;
+    }
 }

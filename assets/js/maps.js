@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }).addTo(mapa);
     marcador = L.marker([-25.3524099, -57.5899758], { draggable: true }).addTo(mapa);
 
-    marcador.on('dragend', function (event) {
-        let lat = event.target.getLatLng().lat;
-        let lon = event.target.getLatLng().lng;
-        document.getElementById("ubicacion").value = lat + ", " + lon;
-    });
+    // marcador.on('dragend', function (event) {
+    //     let lat = event.target.getLatLng().lat;
+    //     let lon = event.target.getLatLng().lng;
+    //     // document.getElementById("ubicacion").value = lat + ", " + lon;
+    // });
 });
 
 
@@ -22,9 +22,9 @@ function obtenerUbicacion(event) {
         navigator.geolocation.getCurrentPosition(function (position) {
             let lat = position.coords.latitude;
             let lon = position.coords.longitude;
-            let ubicacionTexto = lat + ", " + lon;
+            // let ubicacionTexto = lat + ", " + lon;
 
-            document.getElementById("ubicacion").value = ubicacionTexto;
+            // document.getElementById("ubicacion").value = ubicacionTexto;
 
             if (mapa) { // Verifica si 'mapa' está definido
                 mapa.setView([lat, lon], 15);
