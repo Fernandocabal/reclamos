@@ -8,10 +8,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }).addTo(mapa);
     marcador = L.marker([-25.3524099, -57.5899758], { draggable: true }).addTo(mapa);
 
+
+    const tabubicacion = document.querySelector('#ubicacion-tab');
+    if (tabubicacion) {
+        tabubicacion.addEventListener('shown.bs.tab', function () {
+            setTimeout(() => {
+                mapa.invalidateSize(); // Recalcula el tamaño del mapa
+            }, 300); // Pequeña demora para asegurar que el tab ya es visible
+        });
+    }
     // marcador.on('dragend', function (event) {
     //     let lat = event.target.getLatLng().lat;
     //     let lon = event.target.getLatLng().lng;
-    //     // document.getElementById("ubicacion").value = lat + ", " + lon;
+    //     document.getElementById("ubicacion").value = lat + ", " + lon;
     // });
 });
 

@@ -70,7 +70,7 @@
 }
 
 .form_reclamos {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     height: 400px;
     width: 100%;
     display: flex;
@@ -83,7 +83,7 @@
 }
 
 .form_select {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -91,17 +91,11 @@
 
 .group-form {
     width: 100%;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     display: flex;
 }
 
-.campo_maps {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 90%;
-}
+
 
 .whatsapp_link {
     display: flex;
@@ -119,7 +113,7 @@
     flex-direction: column;
     width: 100%;
     gap: 13px;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 .datos_obtenidos {
@@ -135,9 +129,20 @@
     display: flex;
 }
 
-#map {
+.campo_maps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 300px;
+    /* outline: 1px solid red; */
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
     margin-bottom: 10px;
 }
 
@@ -146,10 +151,9 @@
         width: 100%;
     }
 
-    .cabecera div p {
-        display: flex;
-        justify-content: center;
-    }
+    /* .cabecera div p {
+        outline: 1px solid red;
+    } */
 
     .form_reclamos_input p {
         font-size: 12px;

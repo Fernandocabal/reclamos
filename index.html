@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
         integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
         crossorigin="anonymous"></script>
+    <script src="./assets/js/reclamos/reclamos.js"></script>
 </head>
 <!-- CSS de Leaflet -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -31,11 +32,12 @@
             <img src="./assets/img/logof.png" class="logo_awaterra">
             <h1 class="m-0">AwaTerra S.A</h1>
             <div style="margin-top: 10px;">
-                <p class="p-0 m-0">Bienvenido a la página de reclamos de Awaterra. Por favor, ingresa tu código de
-                    usuario
-                    para
-                    continuar.
+                <p class="col-sm-12 d-flex align-items-center justify-content-center p-0 m-0">Bienvenido a la página de
+                    reclamos de Awaterra.
                 </p>
+                <p class="col-sm-12 d-flex align-items-center justify-content-center p-0 m-0">Por favor, ingresa tu
+                    código de
+                    usuario para continuar.</p>
             </div>
             <div style="display: flex; align-items: center;">
                 <p class="p-0 m-0">Si no tienes un código,solicítelo al</p>
@@ -67,34 +69,30 @@
                     type="button" role="tab" aria-controls="ubicacion-tab-pane" aria-selected="false">Ubicacion</button>
             </li>
         </ul>
-        <div class="tab-content col-sm-12" id="myTabContent" style="outline: 1px solid red;">
+        <div class="tab-content col-sm-12" id="myTabContent">
             <div class="tab-pane  fade show active" id="datos-tab-pane" role="tabpanel" aria-labelledby="datos-tab"
                 tabindex="0">
                 <p>Datos del usuario:</p>
                 <section class="col-sm-12 d-flex p-2 ctn_datos_usuarios">
                     <div class="col-sm-6 d-flex flex-column justify-content-around">
-                        <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center"
-                            style="outline: 1px solid red;">
+                        <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center">
                             <label for="name_user">Nombre y Apellido</label>
                             <input class="awinput col-sm-8" type="text" name="" id="name_user">
                         </div>
-                        <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center"
-                            style="outline: 1px solid red;">
+                        <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center">
                             <label for="barrio">Barrio</label>
                             <input class="awinput col-sm-8" type="text" name="" id="barrio">
                         </div>
-                        <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center"
-                            style="outline: 1px solid red;">
+                        <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center">
                             <label for="direccion">Direccion</label>
                             <input class="awinput col-sm-8" type="text" name="" id="direccion">
                         </div>
-                        <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center"
-                            style="outline: 1px solid red;">
+                        <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center">
                             <label for="telefono">Telefono</label>
                             <input class="awinput col-sm-8" type="text" name="" id="telefono">
                         </div>
-                        <div class="col-md-11 mb-4 group-datos d-flex flex-column justify-content-between align-items-start"
-                            style="outline: 1px solid red;">
+                        <div
+                            class="col-md-11 mb-4 group-datos d-flex flex-column justify-content-between align-items-start">
                             <label for="observacion">Observacion</label>
                             <textarea class="awinput col-12" type="text" name="" id="observacion"
                                 style="height: 100px"></textarea>
@@ -115,30 +113,37 @@
                                 </div>
                             </div>
                             <span class="p-1" style="outline: 1px solid black;">
-                                <p><b>OBSERVACIÓN:</b> En caso de inconvenientes con este servicio favor comunicarse al
+                                <p class="col-sm-12 p-0 m-0">
+                                    <b>OBSERVACIÓN:</b> En caso de inconvenientes con este servicio favor comunicarse al
                                     número <a class=""
                                         href="https://wa.me/595981820052?text=Buenas,%20cual%20es%20mi%20codigo%20de%20usuario?"
                                         style="text-decoration: none; color: black;">+595981820052</a>,
-                                    Contacto de AwaTerra S.A.</p>
-                                Horario de Atención: Lunes a Viernes de 07:00hs a 16:00hs, Sábados de 07:00hs a 11:00hs.
+                                    Contacto de AwaTerra S.A.
+                                </p>
+                                <p class="col-sm-12 p-0 m-0">Horario de Atención: Lunes a Viernes de 07:00hs a 16:00hs,
+                                    Sábados de 07:00hs a
+                                    11:00hs.</p>
                             </span>
                             <span>
-
+                                <button type="button" class="awbtn"
+                                    onclick="cambiarATab('adjuntar-tab')">Siguiente</button>
                             </span>
                     </div>
                 </section>
             </div>
 
-            <div class="tab-pane fade" id="adjuntar-pane" role="tabpanel" aria-labelledby="adjuntar-tab" tabindex="0">
-                <div class="d-flex flex-column align-items-center">
-                    <div class="col-12 d-flex">
+            <div class="tab-pane fade col-12" id="adjuntar-pane" role="tabpanel" aria-labelledby="adjuntar-tab"
+                tabindex="0">
+                <section class="d-flex col-sm-12 flex-column" style="width: 100vw; outline: 1px solid red;">
+                    <div class="col-sm-12 d-flex justify-content-around">
                         <p class="m-0">Por favor, adjunta una imagen:</p>
-                        <label for="abrir_camara" class="awbtn">Abrir Camara</label>
-                        <input type="file" name="foto" id="abrir_camara" accept="image/*" capture="camera"
-                            style="display: none;">
+                        <label for="abrir_camara" class="awbtn">Seleccionar Archivos</label>
+                        <input type="file" name="foto" id="abrir_camara" accept="image/*" style="display: none;">
                     </div>
-
-                </div>
+                    <span class="col-sm-12 d-flex ">
+                        <button type="button" class="awbtn" onclick="cambiarATab('ubicacion-tab')">Siguiente</button>
+                    </span>
+                </section>
             </div>
 
 
