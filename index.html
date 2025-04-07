@@ -26,8 +26,8 @@
 <title>Reclamos Awaterra</title>
 </head>
 
-<body>
-    <section class="cabecera container-fluid">
+<body class="container-fluid p-0">
+    <section class="cabecera col-12 m-0 p-0 container-fluid">
         <img src="./assets/img/logof.png" class="logo_awaterra">
         <h1 class="m-0">AwaTerra S.A</h1>
         <div style="margin-top: 10px;">
@@ -52,124 +52,120 @@
                 <input type="submit" value="Enviar" class="awbtn">
             </form>
         </div>
-        <ul class="nav nav-tabs col-sm-12" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="datos-tab" data-bs-toggle="tab" data-bs-target="#datos-tab-pane"
-                    type="button" role="tab" aria-controls="datos-tab-pane" aria-selected="true">Datos del
-                    Usuario</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="adjuntar-tab" data-bs-toggle="tab" data-bs-target="#adjuntar-pane"
-                    type="button" role="tab" aria-controls="adjuntar-pane" aria-selected="false">Adjuntar</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="ubicacion-tab" data-bs-toggle="tab" data-bs-target="#ubicacion-tab-pane"
-                    type="button" role="tab" aria-controls="ubicacion-tab-pane" aria-selected="false">Ubicacion</button>
-            </li>
-        </ul>
-        <div class="tab-content col-sm-12" id="myTabContent">
-            <div class="tab-pane  fade show active" id="datos-tab-pane" role="tabpanel" aria-labelledby="datos-tab"
-                tabindex="0">
-                <p>Datos del usuario:</p>
-                <section class="col-sm-12 d-flex p-2 ctn_datos_usuarios">
-                    <div class="col-sm-6 d-flex flex-column justify-content-around">
-                        <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center">
-                            <label for="name_user">Nombre y Apellido</label>
-                            <input class="awinput col-sm-8" type="text" name="" id="name_user">
-                        </div>
-                        <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center">
-                            <label for="barrio">Barrio</label>
-                            <input class="awinput col-sm-8" type="text" name="" id="barrio">
-                        </div>
-                        <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center">
-                            <label for="direccion">Direccion</label>
-                            <input class="awinput col-sm-8" type="text" name="" id="direccion">
-                        </div>
-                        <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center">
-                            <label for="telefono">Telefono</label>
-                            <input class="awinput col-sm-8" type="text" name="" id="telefono">
-                        </div>
-                        <div
-                            class="col-md-11 mb-4 group-datos d-flex flex-column justify-content-between align-items-start">
-                            <label for="observacion">Observacion</label>
-                            <textarea class="awinput col-12" type="text" name="" id="observacion"
-                                style="height: 100px"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <form action="" method="post" class="form_reclamos_input">
-                            <div class="group-form">
-                                <div class="form_select col-sm-12">
-                                    <select class="form-select form-select-sm" name="" id="">
-                                        <option value="">Selecciona un tipo de reclamo</option>
-                                        <option value="1">Falta de Agua</option>
-                                        <option value="2">Caño Roto</option>
-                                        <option value="3">Falta de presión</option>
-                                        <option value="4">Fugas</option>
-                                        <option value="4">Verificacion de Consumo</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <span class="p-1" style="outline: 1px solid black;">
-                                <p class="col-sm-12 p-0 m-0">
-                                    <b>OBSERVACIÓN:</b> En caso de inconvenientes con este servicio favor comunicarse al
-                                    número <a class=""
-                                        href="https://wa.me/595981820052?text=Buenas,%20cual%20es%20mi%20codigo%20de%20usuario?"
-                                        style="text-decoration: none; color: black;">+595981820052</a>,
-                                    Contacto de AwaTerra S.A.
-                                </p>
-                                <p class="col-sm-12 p-0 m-0">Horario de Atención: Lunes a Viernes de 07:00hs a 16:00hs,
-                                    Sábados de 07:00hs a
-                                    11:00hs.</p>
-                            </span>
-                            <span>
-                                <button type="button" class="awbtn"
-                                    onclick="cambiarATab('adjuntar-tab')">Siguiente</button>
-                            </span>
-                    </div>
-                </section>
-            </div>
-
-            <div class="tab-pane fade col-12" id="adjuntar-pane" role="tabpanel" aria-labelledby="adjuntar-tab"
-                tabindex="0">
-                <section class="d-flex col-sm-12 flex-column" style="width: 100vw; outline: 1px solid red;">
-                    <div class="col-sm-12 d-flex justify-content-around">
-                        <p class="m-0">Por favor, adjunta una imagen:</p>
-                        <label for="abrir_camara" class="awbtn">Seleccionar Archivos</label>
-                        <input type="file" name="foto" id="abrir_camara" accept="image/*" style="display: none;">
-                    </div>
-                    <span class="col-sm-12 d-flex ">
-                        <button type="button" class="awbtn" onclick="cambiarATab('ubicacion-tab')">Siguiente</button>
-                    </span>
-                </section>
-            </div>
-
-
-            <div class="tab-pane fade col-sm-12" id="ubicacion-tab-pane" role="tabpanel" aria-labelledby="ubicacion-tab"
-                tabindex="0">
-                <section class="form_reclamos col-sm-12">
-                    <div class="p-2 d-flex align-items-center">
-                        <p class="m-0">Por favor, selecciona el tipo de reclamo que deseas realizar:</p>
-                    </div>
-                    <div class="campo_maps">
-                        <p class="m-0">Selecciona tu ubicación en el mapa</p>
-                        <div id="map"></div>
-                        <div class="d-flex align-items-center col-sm-12">
-                            <input type="button" class="awbtn awbtn-dark" onclick="obtenerUbicacion(event)"
-                                value="Usar mi ubicación actual" style="line-height: 0px;">
-                        </div>
-                    </div>
-                    <div class="col-12 d-flex justify-content-center align-items-center">
-                        <input type="submit" class="awbtn" value="Realizar Reclamo">
-                    </div>
-                    </form>
-                </section>
-            </div>
-        </div>
     </section>
+    <ul class="nav nav-tabs col-sm-12" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="datos-tab" data-bs-toggle="tab" data-bs-target="#datos-tab-pane"
+                type="button" role="tab" aria-controls="datos-tab-pane" aria-selected="true">Datos del
+                Usuario</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="adjuntar-tab" data-bs-toggle="tab" data-bs-target="#adjuntar-pane"
+                type="button" role="tab" aria-controls="adjuntar-pane" aria-selected="false">Adjuntar</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="ubicacion-tab" data-bs-toggle="tab" data-bs-target="#ubicacion-tab-pane"
+                type="button" role="tab" aria-controls="ubicacion-tab-pane" aria-selected="false">Ubicacion</button>
+        </li>
+    </ul>
+    <div class="tab-content col-sm-12" id="myTabContent">
+        <div class="tab-pane  fade show active" id="datos-tab-pane" role="tabpanel" aria-labelledby="datos-tab"
+            tabindex="0">
+            <p>Datos del usuario:</p>
+            <section class="col-sm-12 d-flex p-2 ctn_datos_usuarios">
+                <div class="col-sm-6 d-flex flex-column justify-content-around">
+                    <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center">
+                        <label for="name_user">Nombre y Apellido</label>
+                        <input class="awinput col-sm-8" type="text" name="" id="name_user">
+                    </div>
+                    <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center">
+                        <label for="barrio">Barrio</label>
+                        <input class="awinput col-sm-8" type="text" name="" id="barrio">
+                    </div>
+                    <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center">
+                        <label for="direccion">Direccion</label>
+                        <input class="awinput col-sm-8" type="text" name="" id="direccion">
+                    </div>
+                    <div class="col-md-11 mb-4 group-datos d-flex justify-content-between align-items-center">
+                        <label for="telefono">Telefono</label>
+                        <input class="awinput col-sm-8" type="text" name="" id="telefono">
+                    </div>
+                    <form action="" method="post" class="form_reclamos_input">
+                        <div class="group-form">
+                            <div class="form_select col-sm-11">
+                                <select class="form-select form-select-sm" name="" id="">
+                                    <option value="">Selecciona un tipo de reclamo</option>
+                                    <option value="1">Falta de Agua</option>
+                                    <option value="2">Caño Roto</option>
+                                    <option value="3">Falta de presión</option>
+                                    <option value="4">Fugas</option>
+                                    <option value="4">Verificacion de Consumo</option>
+                                </select>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-sm-6 d-flex flex-column">
+                    <div
+                        class="col-md-11 mb-4 group-datos d-flex flex-column justify-content-between align-items-start">
+                        <label for="observacion">Observacion</label>
+                        <textarea class="awinput col-12" type="text" name="" id="observacion"
+                            style="height: 100px"></textarea>
+                    </div>
+                    <span class="col-sm-12 mb-1" style="outline: 1px solid black;">
+                        <p class="col-sm-12 p-0 m-0">
+                            <b>OBSERVACIÓN:</b> En caso de inconvenientes con este servicio favor comunicarse al
+                            número <a class=""
+                                href="https://wa.me/595981820052?text=Buenas,%20cual%20es%20mi%20codigo%20de%20usuario?"
+                                style="text-decoration: none; color: black;">+59598182052</a>,
+                            Contacto de AwaTerra S.A.
+                        </p>
+                        <p class="col-sm-12 p-0 m-0">Horario de Atención: Lunes a Viernes de 07:00hs a 16:00hs,
+                            Sábados de 07:00hs a
+                            11:00hs.</p>
+                    </span>
+                    <span>
+                        <button type="button" class="awbtn" onclick="cambiarATab('adjuntar-tab')">Siguiente</button>
+                    </span>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-pane fade col-12" id="adjuntar-pane" role="tabpanel" aria-labelledby="adjuntar-tab"
+            tabindex="0">
+            <section class="d-flex col-sm-12 flex-column" style="width: 100vw; outline: 1px solid red;">
+                <div class="col-sm-12 d-flex justify-content-around">
+                    <p class="m-0">Por favor, adjunta una imagen:</p>
+                    <label for="abrir_camara" class="awbtn">Seleccionar Archivos</label>
+                    <input type="file" name="foto" id="abrir_camara" accept="image/*" style="display: none;">
+                </div>
+                <span class="col-sm-12 d-flex ">
+                    <button type="button" class="awbtn" onclick="cambiarATab('ubicacion-tab')">Siguiente</button>
+                </span>
+            </section>
+        </div>
 
 
-
+        <div class="tab-pane fade col-sm-12" id="ubicacion-tab-pane" role="tabpanel" aria-labelledby="ubicacion-tab"
+            tabindex="0">
+            <section class="form_reclamos col-sm-12">
+                <div class="p-2 d-flex align-items-center">
+                    <p class="m-0">Por favor, selecciona el tipo de reclamo que deseas realizar:</p>
+                </div>
+                <div class="campo_maps">
+                    <p class="m-0">Selecciona tu ubicación en el mapa</p>
+                    <div id="map"></div>
+                    <div class="d-flex align-items-center col-sm-12">
+                        <input type="button" class="awbtn awbtn-dark" onclick="obtenerUbicacion(event)"
+                            value="Usar mi ubicación actual" style="line-height: 0px;">
+                    </div>
+                </div>
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <input type="submit" class="awbtn" value="Realizar Reclamo">
+                </div>
+                </form>
+            </section>
+        </div>
+    </div>
 </body>
 
 </html>

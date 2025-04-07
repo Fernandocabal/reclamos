@@ -73,6 +73,7 @@ header {
 }
 
 .form_codigo_cliente {
+    width: 100%;
     height: 70px;
     align-items: center;
 }
@@ -158,6 +159,26 @@ header {
     .cabecera {
         min-width: 100%;
         min-height: 200px;
+    }
+
+    /* .cabecera div p {
+        outline: 1px solid red;
+    } */
+
+    .form_reclamos_input p {
+        font-size: 12px;
+    }
+
+    .ctn_datos_usuarios {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:390px) and (max-width: 932px) {
+    .cabecera {
+        min-width: 100%;
+        min-height: 200px;
+        outline: 1px solid red;
     }
 
     /* .cabecera div p {
