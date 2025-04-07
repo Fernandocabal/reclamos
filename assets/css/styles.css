@@ -78,6 +78,13 @@ header {
     align-items: center;
 }
 
+
+.ctn_datos_usuarios label::after {
+
+    content: "*";
+    color: red;
+}
+
 .form_reclamos {
     /* outline: 1px solid red; */
     height: 400px;
