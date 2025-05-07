@@ -45,11 +45,12 @@
                     src="./assets/img/whatsapp.png" class="whatsapp_img" alt=""></a>
         </div>
     </section>
-    <section class="d-flex flex-column justify-content-around form_codigo_cliente">
+    <section class="d-flex flex-column justify-content-around form_codigo_usuario">
         <div>
-            <form action="" method="post">
-                <input class="awinput" type="text" name="codigo_cliente" placeholder="Codigo Cliente" required>
-                <input type="submit" value="Enviar" class="awbtn">
+            <form id="formgetuser" action="" method="post">
+                <input class="awinput" type="text" name="codigo_usuario" id="codigo_usuario"
+                    placeholder="Codigo Cliente" required>
+                <input type="submit" id="btnenviarcode" value="Enviar" class="awbtn">
             </form>
         </div>
     </section>
@@ -90,7 +91,7 @@
                         <label for="telefono">Teléfono</label>
                         <input class="awinput col-sm-8" type="text" name="" id="telefono">
                     </div>
-                    <div class="p-2 d-flex align-items-center">
+                    <div class="col-sm-12 d-flex align-items-center">
                         <p class="m-0">Por favor, selecciona el tipo de reclamo que deseas realizar:</p>
                     </div>
                     <form action="" method="post" class="form_reclamos_input">
@@ -168,5 +169,6 @@
         </div>
     </div>
 </body>
+<script src="./scripts/getuser.js"></script>
 
 </html>
